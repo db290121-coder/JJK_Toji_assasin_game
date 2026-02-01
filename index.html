@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toji: Assassin of JJK</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="gameContainer" class="game-container">
+        <!-- Main Menu -->
+        <div id="mainMenu" class="menu-screen">
+            <div class="menu-content">
+                <h1 class="game-title">TOJI: ASSASSIN</h1>
+                <p class="subtitle">Jujutsu Kaisen - Assassination Storyline</p>
+                <button class="btn-menu" onclick="game.startGame()">Start Mission</button>
+                <button class="btn-menu" onclick="game.showStory()">Story</button>
+                <button class="btn-menu" onclick="game.showControls()">Controls</button>
+            </div>
+        </div>
+
+        <!-- Story Screen -->
+        <div id="storyScreen" class="menu-screen hidden">
+            <div class="menu-content">
+                <h2>THE STORY</h2>
+                <div class="story-text">
+                    <p>Toji Zenin, the legendary assassin with no cursed energy. Once bound to the Zenin clan, she has freed herself and now works as a powerful independent operative.</p>
+                    <p>Multiple targets have appeared across the Jujutsu world - sorcerers who stand in your way. Each mission brings you closer to your ultimate goal.</p>
+                    <p>Navigate through dangerous areas, eliminate targets with precision, and collect cursed tools to enhance your abilities.</p>
+                </div>
+                <button class="btn-menu" onclick="game.showMenu()">Back to Menu</button>
+            </div>
+        </div>
+
+        <!-- Controls Screen -->
+        <div id="controlsScreen" class="menu-screen hidden">
+            <div class="menu-content">
+                <h2>CONTROLS</h2>
+                <div class="controls-text">
+                    <p><strong>Arrow Keys</strong> - Move Toji</p>
+                    <p><strong>Space</strong> - Attack</p>
+                    <p><strong>E</strong> - Interact/Pick up items</p>
+                    <p><strong>Q</strong> - Use Special Ability</p>
+                    <p><strong>ESC</strong> - Pause/Resume</p>
+                </div>
+                <button class="btn-menu" onclick="game.showMenu()">Back to Menu</button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="gameScreen" class="game-screen hidden">
+            <canvas id="gameCanvas" width="1000" height="600"></canvas>
+            <div class="game-ui">
+                <div class="ui-stats">
+                    <div class="stat-bar">
+                        <label>HP:</label>
+                        <div class="bar" id="hpBar">
+                            <div class="fill" id="hpFill"></div>
+                        </div>
+                        <span id="hpText">100/100</span>
+                    </div>
+                    <div class="stat-bar">
+                        <label>Stamina:</label>
+                        <div class="bar" id="staminaBar">
+                            <div class="fill" id="staminaFill"></div>
+                        </div>
+                        <span id="staminaText">100/100</span>
+                    </div>
+                    <div class="stat-item">
+                        <label>Mission:</label>
+                        <span id="missionText">Survive</span>
+                    </div>
+                    <div class="stat-item">
+                        <label>Targets Eliminated:</label>
+                        <span id="targetText">0</span>
+                    </div>
+                </div>
+                <div class="ui-info" id="infoBox"></div>
+            </div>
+            <button class="btn-menu btn-pause" onclick="game.togglePause()">Pause</button>
+        </div>
+
+        <!-- Pause Screen -->
+        <div id="pauseScreen" class="menu-screen hidden">
+            <div class="menu-content">
+                <h2>PAUSED</h2>
+                <button class="btn-menu" onclick="game.togglePause()">Resume</button>
+                <button class="btn-menu" onclick="game.returnToMenu()">Back to Menu</button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen" class="menu-screen hidden">
+            <div class="menu-content">
+                <h2 id="gameOverTitle">MISSION COMPLETE</h2>
+                <div class="game-over-stats">
+                    <p><strong>Targets Eliminated:</strong> <span id="finalTargets">0</span></p>
+                    <p><strong>Score:</strong> <span id="finalScore">0</span></p>
+                </div>
+                <button class="btn-menu" onclick="game.startGame()">New Mission</button>
+                <button class="btn-menu" onclick="game.showMenu()">Back to Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

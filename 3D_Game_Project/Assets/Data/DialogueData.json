@@ -1,0 +1,118 @@
+{
+  "nodes": [
+    {
+      "id": "intro_1",
+      "characterName": "Unknown Handler",
+      "dialogue": "You've been waiting for this moment, haven't you, Toji?",
+      "choices": [
+        {
+          "text": "I'm ready for anything.",
+          "nextNodeId": "intro_2",
+          "effect": null
+        },
+        {
+          "text": "Tell me who I'm hunting.",
+          "nextNodeId": "intro_3",
+          "effect": null
+        }
+      ],
+      "audioClips": [],
+      "displayDuration": 5.0
+    },
+    {
+      "id": "intro_2",
+      "characterName": "Unknown Handler",
+      "dialogue": "Good. Your first targets are at Tokyo Jujutsu High. They won't see you coming.",
+      "choices": [
+        {
+          "text": "Understood. I'll complete this mission.",
+          "nextNodeId": "",
+          "effect": {
+            "effectType": "SkillReward",
+            "skillId": "BasicAttack",
+            "itemId": "",
+            "amount": 0
+          }
+        }
+      ],
+      "audioClips": [],
+      "displayDuration": 4.0
+    },
+    {
+      "id": "intro_3",
+      "characterName": "Unknown Handler",
+      "dialogue": "Jujutsu sorcerers. Strong ones. Yuji Itadori and Nobara Kugisaki are your first targets. Make it clean.",
+      "choices": [
+        {
+          "text": "Consider it done.",
+          "nextNodeId": "",
+          "effect": {
+            "effectType": "SkillReward",
+            "skillId": "SilentAssassination",
+            "itemId": "",
+            "amount": 0
+          }
+        }
+      ],
+      "audioClips": [],
+      "displayDuration": 4.5
+    },
+    {
+      "id": "victory_sukuna",
+      "characterName": "Toji",
+      "dialogue": "I've done what no one else could. Sukuna is defeated.",
+      "choices": [
+        {
+          "text": "End game",
+          "nextNodeId": "",
+          "effect": {
+            "effectType": "ScoreReward",
+            "skillId": "",
+            "itemId": "",
+            "amount": 10000
+          }
+        }
+      ],
+      "audioClips": [],
+      "displayDuration": 3.0
+    },
+    {
+      "id": "mission_briefing_stage2",
+      "characterName": "Mission Control",
+      "dialogue": "Stage 2 complete. Your next target is Megumi Fushiguro. He's hiding in a shrine. Be careful - he's no ordinary sorcerer.",
+      "choices": [
+        {
+          "text": "I'll handle it.",
+          "nextNodeId": "",
+          "effect": {
+            "effectType": "SkillReward",
+            "skillId": "PowerAttack",
+            "itemId": "",
+            "amount": 0
+          }
+        }
+      ],
+      "audioClips": [],
+      "displayDuration": 4.0
+    },
+    {
+      "id": "character_encounter_gojo",
+      "characterName": "Satoru Gojo",
+      "dialogue": "So... you've come for me too? Interesting. Let's see if you're worthy of my attention.",
+      "choices": [
+        {
+          "text": "Enough talking. Come at me.",
+          "nextNodeId": "",
+          "effect": null
+        },
+        {
+          "text": "I'm not here for words.",
+          "nextNodeId": "",
+          "effect": null
+        }
+      ],
+      "audioClips": [],
+      "displayDuration": 3.5
+    }
+  ]
+}
